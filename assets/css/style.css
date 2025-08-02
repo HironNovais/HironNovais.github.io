@@ -1,9 +1,9 @@
 /* Global Styles */
 :root {
-    --primary-color: #14357c;
+    --primary-color: #378bda;
     --secondary-color: #16161A;
     --accent-color: #FF8906;
-    --light-color: #ff0000;
+    --light-color: #1C90FF;
     --dark-color: #000000;
 }
 
@@ -227,8 +227,7 @@ header {
     flex-wrap: wrap;
     gap: 1rem;
     margin-top: 2rem;
-    
-    
+    font-weight: 500;    
 }
 
 .skills span {
@@ -279,7 +278,8 @@ header {
 }
 
 .certificates {
-    max-width: 1200px;
+    max-width: 200px;
+    max-height: 200px;
     margin: 0 auto;
     text-align: center;
 }
@@ -313,9 +313,6 @@ header {
     color: white;
 }
 
-.project-card:hover {
-    /*transform: translateY(-100px);*/
-}
 
 .project-card img {
     width: 100%;
