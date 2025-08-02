@@ -1,10 +1,10 @@
 /* Global Styles */
 :root {
-    --primary-color: #38948f;
+    --primary-color: #14357c;
     --secondary-color: #16161A;
     --accent-color: #FF8906;
-    --light-color: #F0F0F0;
-    --dark-color: #1F1F1F;
+    --light-color: #ff0000;
+    --dark-color: #000000;
 }
 
 * {
@@ -14,15 +14,69 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+
 body {
-    line-height: 1.6;
-    color: #333;
-    background-color: #949494;
+    margin-left: 260px;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #174dc9;
 }
 
-a {
+nav ul{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 260px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #16161A;
+}
+nav ul li{
+    list-style: none;
+}
+nav ul li a{
+    display: block;
     text-decoration: none;
-    color: var(--primary-color);
+    text-transform: uppercase;
+    font-size: 20px;
+    color: #F0F0F0;
+    position:relative;
+    padding: 25px 0 25px 25px;
+}
+nav ul li a:before{
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background: #e3e9f7;
+    border-radius: 40px 0 0 40px;
+    z-index: -1;
+    transition: all 300ms ease-in-out;
+}
+nav ul li a:hover{
+    color: #16161A;
+}
+nav ul li a:hover::before{
+    width: 95%;
+}
+.wrapper{
+    margin-left: 260px;
+}
+.section{
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    text-align: center;
+}
+.box-area h2{
+    text-transform: uppercase;
+    font-size: 50px;
+}
+.box-area{
+    width: 75%;
 }
 
 .btn {
@@ -34,6 +88,7 @@ a {
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.3s ease;
+    font-weight: 700;
 }
 
 .btn:hover {
@@ -45,7 +100,7 @@ a {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 3rem;
-    color: var(--secondary-color);
+    color: whitesmoke;
     position: relative;
 }
 
@@ -62,21 +117,14 @@ a {
 
 /* Header & Navigation */
 header {
-    background: #38373a;
+    background: #16161A;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     position: fixed;
     width: 100%;
     z-index: 1000;
 }
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 5%;
-    max-width: 1400px;
-    margin: 0 auto;
-}
+
 
 .logo {
     color: white;
@@ -88,24 +136,7 @@ nav {
     color: var(--primary-color);
 }
 
-.nav-links {
-    display: flex;
-    list-style: none;
-}
 
-.nav-links li {
-    margin-left: 2rem;
-}
-
-.nav-links a {
-    color: var(--dark-color);
-    font-weight: 500;
-    transition: color 0.3s;
-}
-
-.nav-links a:hover {
-    color: var(--primary-color);
-}
 
 .burger {
     display: none;
@@ -117,7 +148,7 @@ nav {
     height: 100vh;
     display: flex;
     align-items: center;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../img/project1.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../img/imagem_wallpaper_home.png');
     background-size: cover;
     background-position: center;
     color: #fff;
@@ -133,16 +164,19 @@ nav {
 .hero h1 {
     font-size: 3.5rem;
     margin-bottom: 1rem;
+    color: whitesmoke;
 }
 
 .hero h1 span {
     color: var(--primary-color);
+    color: whitesmoke;
 }
 
 .hero h2 {
     font-size: 2rem;
     margin-bottom: 1.5rem;
     font-weight: 300;
+    color: whitesmoke;
 }
 
 .hero p {
@@ -153,7 +187,8 @@ nav {
 /* About Section */
 .about {
     padding: 6rem 5%;
-    background: #fff;
+    background: #0f0f11;
+    color: white;
 }
 
 .about-container {
@@ -163,6 +198,8 @@ nav {
     max-width: 1200px;
     margin: 0 auto;
     gap: 3rem;
+    background-color: #242424;
+    
 }
 
 .about-img {
@@ -190,6 +227,8 @@ nav {
     flex-wrap: wrap;
     gap: 1rem;
     margin-top: 2rem;
+    
+    
 }
 
 .skills span {
@@ -197,12 +236,13 @@ nav {
     padding: 0.5rem 1rem;
     border-radius: 20px;
     font-size: 0.9rem;
+    
 }
 
 /* Qualification Section */
 .qualification {
     padding: 6rem 5%;
-    background: #f9f9f9;
+    background: #0f0f11;
 }
 
 .qualification-container {
@@ -214,10 +254,11 @@ nav {
 
 .education, .experience {
     flex: 1;
-    background: #fff;
+    color: white;
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    background-color: #242424;
 }
 
 .timeline-item {
@@ -252,7 +293,7 @@ nav {
 /* Projects Section */
 .projects {
     padding: 6rem 5%;
-    background: #fff;
+    background: #0f0f11;
 }
 
 .projects-container {
@@ -264,15 +305,16 @@ nav {
 }
 
 .project-card {
-    background: #fff;
+    background: #242424;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
+    color: white;
 }
 
 .project-card:hover {
-    transform: translateY(-10px);
+    /*transform: translateY(-100px);*/
 }
 
 .project-card img {
@@ -282,13 +324,13 @@ nav {
 }
 
 .project-card h3 {
+    color: white;
     padding: 1rem;
-    color: var(--secondary-color);
 }
 
 .project-card p {
     padding: 0 1rem 1rem;
-    color: #666;
+    color: whitesmoke;
 }
 
 .project-card .btn {
@@ -300,10 +342,12 @@ nav {
 /* Contact Section */
 .contact {
     padding: 6rem 5%;
-    background: #f9f9f9;
+    background: #0f0f11;
+    color: white;
 }
 
 .contact-container {
+    
     display: flex;
     max-width: 1200px;
     margin: 0 auto;
@@ -312,7 +356,7 @@ nav {
 
 .contact-info {
     flex: 1;
-    background: #fff;
+    background: #242424;
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
@@ -329,6 +373,7 @@ nav {
 }
 
 .social-links {
+    color: white;
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -337,7 +382,8 @@ nav {
 .social-links a {
     display: flex;
     align-items: center;
-    color: var(--dark-color);
+    color: white;
+    text-decoration: none;
     transition: color 0.3s;
 }
 
@@ -352,7 +398,7 @@ nav {
 
 .contact-form {
     flex: 1;
-    background: #fff;
+    background: #242424;
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
@@ -364,6 +410,8 @@ nav {
     padding: 1rem;
     margin-bottom: 1.5rem;
     border: 1px solid #ddd;
+    background: #242424;
+    color: white;
     border-radius: 5px;
     font-size: 1rem;
 }
